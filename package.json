@@ -4,7 +4,10 @@
   "description": "Proyecto",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch src/scss:build/css"
+    "sass": "sass --watch src/scss:build/css",
+    "tarea": "gulp tarea",
+    "dev": "gulp dev" 
+    
   },
   "keywords": [
     "Sass",
@@ -12,10 +15,9 @@
   ],
   "author": "Oscar M",
   "license": "ISC",
-  "dependencies": {
-    "sass": "^1.53.0"
-  },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.53.0"
   }
 }
