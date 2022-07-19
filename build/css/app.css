@@ -354,6 +354,10 @@ h3 {
   font-size: 3rem;
 }
 
+img {
+  width: 100%;
+}
+
 .header {
   background-color: #4CB8B3;
 }
@@ -401,6 +405,9 @@ h3 {
 
 .video {
   position: relative;
+  max-height: 70rem;
+  min-height: 50rem;
+  overflow: hidden;
 }
 .video .overlay {
   position: absolute;
@@ -408,8 +415,40 @@ h3 {
   background: linear-gradient(221deg, rgb(2, 0, 36) 8%, rgba(9, 84, 221, 0.3281687675) 84%);
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .video video {
-  width: 100%;
+  width: auto;
   display: block;
+}
+@media (min-width: 992px) {
+  .video video {
+    width: 100%;
+  }
+}
+
+.contenido-video {
+  z-index: 10;
+}
+.contenido-video h2 {
+  color: #FFFFFF;
+  font-size: 7rem;
+  margin: 0;
+}
+.contenido-video p {
+  background-color: #F53756;
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.sobrefestival {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
 }
