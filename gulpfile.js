@@ -45,8 +45,18 @@ function versionAvif( done ){
     done();
 }
 
+function javascript (done){
+    src('src/js/**/*.js')
+    .pipe(dest('build/js'));
+
+    done();
+
+}
+
 function dev(done){
     watch('src/scss/**/*.scss', css)
+    watch('src/js/**/*.js', javascript)
+
     done ();
 }
 
@@ -62,7 +72,8 @@ function imagenes (done){
 }
 
 exports.css = css; //npm run dev "O" npx gulp dev// esto será a manera de ejecutar cualquiera de las ambas opciones
+exports.js = javascript;//ejecuta javascript
 exports.imagenes= imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel( imagenes, versionWebp, versionAvif, dev);
+exports.dev = parallel( imagenes, versionWebp, versionAvif, javascript, dev);
