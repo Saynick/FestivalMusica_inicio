@@ -7,7 +7,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function iniciarApp(){
     crearGaleria();
+    scrollNav();
 
+}
+
+function scrollNav(){
+    const enlaces = document.querySelectorAll('.navegacion-principal a');
 }
 
 function crearGaleria(){
